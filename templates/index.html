@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Twitter Scrapper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Twitter Scraper</h1>
+        <p>Type a phrase to scrap on twitter:</p>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label>Phrase:</label>
+                <input type="text" class="form-control" placeholder="Enter phrase" id="phrase" name="phrase">
+            </div>
+            <button type="submit" class="btn btn-primary" name="button">Submit</button>
+        </form>
+        <p class="py-3">{{data}}</p>
+
+        {% for tweet in tweetsDetails %}
+        <div class="container py-5">
+            <p>Username: {{tweet[0]}}</p>
+            <p>Tweet: {{tweet[1]}}</p>
+            <p>Location: {{tweet[2]}}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+
+</html>

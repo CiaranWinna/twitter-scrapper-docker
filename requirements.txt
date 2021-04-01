@@ -1,0 +1,6 @@
+flask
+twitterscraper
+jinja2
+pandas
+datetime
+flask_mysqldb
